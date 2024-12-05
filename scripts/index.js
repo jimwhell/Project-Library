@@ -1,17 +1,31 @@
 //Library Array
 const myLibrary = [];
 
-//Book Constructor
-function Book(title, author, noOfPages, readStatus) 
-{
-    this.title = title;
-    this.author = author;
-    this.noOfPages = noOfPages;
-    this.readStatus = readStatus;
-    this.info = function() {
+class Book {
+    constructor(title, author, noOfPages, readStatus) {
+        this.title = title;
+        this.author = author;
+        this.noOfPages = noOfPages;
+        this.readStatus = readStatus;
+    }
+
+    info() {
         return `${this.title}, by ${this.author}, ${this.noOfPages} pages, ${this.readStatus}`;
     }
 }
+
+//Book Constructor
+// function Book(title, author, noOfPages, readStatus) 
+// {
+//     this.title = title;
+//     this.author = author;
+//     this.noOfPages = noOfPages;
+//     this.readStatus = readStatus;
+//     this.info = function() {
+//         return `${this.title}, by ${this.author}, ${this.noOfPages} pages, ${this.readStatus}`;
+//     }
+// }
+
 
 //Function to create a book object and push it into the library array
 function addBookToLibrary(title, author, noOfPages, readStatus) 
